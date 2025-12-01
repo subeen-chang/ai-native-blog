@@ -1,3 +1,5 @@
+'use client'
+
 interface Author {
   name: string;
   bio: string;
