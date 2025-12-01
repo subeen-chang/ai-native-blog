@@ -1,4 +1,5 @@
 import { BlogPosts } from 'app/components/posts'
+import SubscriptionForm from 'app/components/subscription-form'
 
 export default function Page() {
   return (
@@ -16,6 +17,7 @@ export default function Page() {
       <div className="my-8">
         <BlogPosts />
       </div>
+      <SubscriptionForm />
     </section>
   )
 }

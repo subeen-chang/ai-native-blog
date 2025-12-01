@@ -1,5 +1,10 @@
 @import 'tailwindcss';
 
+@theme {
+  --color-scheme: light dark;
+  --dark-mode: class;
+}
+
 ::selection {
   background-color: #47a3f3;
   color: #fefefe;
@@ -17,6 +22,14 @@
   --sh-entity: #e25a1c;
 }
 
+html.dark {
+  --sh-class: #4c97f8;
+  --sh-identifier: white;
+  --sh-keyword: #f47067;
+  --sh-string: #0fa295;
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --sh-class: #4c97f8;
@@ -31,6 +44,13 @@
 
 html {
   min-width: 360px;
+  color: black;
+  background-color: white;
+}
+
+html.dark {
+  color: white;
+  background-color: black;
 }
 
 .prose .anchor {
