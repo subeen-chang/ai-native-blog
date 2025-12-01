@@ -37,13 +37,13 @@ export default function AuthorProfile({ author }: AuthorProfileProps) {
 
 function AuthorAvatar({ name, avatarUrl }: Pick<Author, "name" | "avatarUrl">) {
   return (
-    <div className={`relative ${AVATAR_SIZE_CLASS} rounded-full overflow-hidden flex-shrink-0`}>
+    <div className={`${AVATAR_SIZE_CLASS} rounded-full overflow-hidden flex-shrink-0`}>
       <Image
         src={avatarUrl}
         alt={`${name}'s avatar`}
-        fill
-        className="object-cover"
-        sizes={`${AVATAR_SIZE_PX}px`}
+        width={AVATAR_SIZE_PX}
+        height={AVATAR_SIZE_PX}
+        className="object-cover rounded-full"
         priority={false}
       />
     </div>
